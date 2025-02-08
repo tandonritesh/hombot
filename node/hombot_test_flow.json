@@ -1,0 +1,140 @@
+[
+    {
+        "id": "3b19a5cb64979e13",
+        "type": "debug",
+        "z": "c1d374e1bd4157b5",
+        "name": "",
+        "active": true,
+        "console": "false",
+        "complete": "payload",
+        "x": 570,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "d92d02c07dc6be6f",
+        "type": "mqtt in",
+        "z": "c1d374e1bd4157b5",
+        "name": "",
+        "topic": "hombot/type/controller/id/con001/evt/+/fmt/bin",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "842716a69b7e8471",
+        "nl": false,
+        "rap": false,
+        "inputs": 0,
+        "x": 210,
+        "y": 60,
+        "wires": [
+            [
+                "3b19a5cb64979e13"
+            ]
+        ]
+    },
+    {
+        "id": "39e147bc272fd9c3",
+        "type": "debug",
+        "z": "c1d374e1bd4157b5",
+        "name": "",
+        "active": true,
+        "console": "false",
+        "complete": "payload",
+        "x": 570,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "c979260062a943df",
+        "type": "mqtt in",
+        "z": "c1d374e1bd4157b5",
+        "name": "",
+        "topic": "hombot/type/controller/id/con001/monitor/msg/fmt/txt",
+        "broker": "c5681ad9.c5f2",
+        "inputs": 0,
+        "x": 230,
+        "y": 120,
+        "wires": [
+            [
+                "39e147bc272fd9c3"
+            ]
+        ]
+    },
+    {
+        "id": "2893361bba01c159",
+        "type": "mqtt in",
+        "z": "c1d374e1bd4157b5",
+        "name": "",
+        "topic": "hombot/type/controller/id/con001/err/msg/fmt/txt",
+        "broker": "c5681ad9.c5f2",
+        "inputs": 0,
+        "x": 220,
+        "y": 180,
+        "wires": [
+            [
+                "7da3f37d11a19be6"
+            ]
+        ]
+    },
+    {
+        "id": "7da3f37d11a19be6",
+        "type": "debug",
+        "z": "c1d374e1bd4157b5",
+        "name": "",
+        "active": true,
+        "console": "false",
+        "complete": "payload",
+        "x": 570,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "842716a69b7e8471",
+        "type": "mqtt-broker",
+        "name": "Mosquitto",
+        "broker": "192.168.29.204",
+        "port": 1883,
+        "clientid": "a-hombot-SPEECH_APP_101",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": 60,
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "sessionExpiry": ""
+    },
+    {
+        "id": "c5681ad9.c5f2",
+        "type": "mqtt-broker",
+        "z": "9a4a98be.9708c",
+        "broker": "192.168.29.204",
+        "port": "1883",
+        "clientid": "d-hombot-nodemcu-board1",
+        "usetls": false,
+        "verifyservercert": true,
+        "compatmode": true,
+        "keepalive": "15",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": null,
+        "birthPayload": "",
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": null,
+        "willPayload": ""
+    }
+]
